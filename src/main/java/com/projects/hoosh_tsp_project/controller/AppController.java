@@ -81,7 +81,10 @@ public class AppController extends Controller<AppModel, AppView> {
                     while (!isStopped) {
                    /*     System.out.println("================================== Generation : "
                                 + generationCount++ + " ==================================");*/
-                        Platform.runLater(() -> view.generation.setText("GENERATION "+ generationCount.getAndIncrement()));
+                        String generation = "GENERATION " + generationCount.getAndIncrement();
+                        Platform.runLater(() -> {
+                            view.generation.setText(generation);
+                        });
                         int nSize = Integer.parseInt(view.populationSizeTXF.getText());
                         double nRate = Double.parseDouble(view.mutationRateTXF.getText());
                         model.population = new Population(model.vertexSet, nSize, nRate);
@@ -111,12 +114,12 @@ public class AppController extends Controller<AppModel, AppView> {
                             }
                             i--;
                         }
+                        //model.cleanPopBook();
                         String c = (model.population.getInfo());
                      //   System.out.println(c);
-
-                        model.writeToPopBook(c + "\n");
-                        model.writeToPopBook(model.population.getDetailedInfo());
-
+                        model.writeToPopBook("========================== "+generation+" ==========================\n");
+                        model.writeToPopBook(c);
+                     //   model.writeToPopBook(model.population.getDetailedInfo());
                         Thread.sleep(Long.parseLong(view.pauseTimeTXF.getText()));
                     }
 

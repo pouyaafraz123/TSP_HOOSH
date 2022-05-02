@@ -142,13 +142,24 @@ public class AppView extends View<AppModel> {
         for (int i = 0; i < max; i++) {
             from = path.get(i);
             to = path.get(i + 1);
-            fromX = (painting.getWidth() - radius) * getRatioX(model.vertexSet.getVertex(from), map) + radius / 2;
-            fromY = (painting.getHeight() - radius) * getRatioY(model.vertexSet.getVertex(from), map) + radius / 2;
-            toX = (painting.getWidth() - radius) * getRatioX(model.vertexSet.getVertex(to), map) + radius / 2;
-            toY = (painting.getHeight() - radius) * getRatioY(model.vertexSet.getVertex(to), map) + radius / 2;
-            gc.setStroke(Color.AQUA);
-            gc.setLineWidth(2);
-            gc.strokeLine(fromX, fromY, toX, toY);
+            drawLine(map, from, to, gc);
         }
+        from = path.get(max);
+        to = path.get(0);
+        drawLine(map,from,to,gc);
+    }
+
+    private void drawLine(MapReference map, int from, int to, GraphicsContext gc) {
+        double fromX;
+        double toY;
+        double fromY;
+        double toX;
+        fromX = (painting.getWidth() - radius) * getRatioX(model.vertexSet.getVertex(from), map) + radius / 2;
+        fromY = (painting.getHeight() - radius) * getRatioY(model.vertexSet.getVertex(from), map) + radius / 2;
+        toX = (painting.getWidth() - radius) * getRatioX(model.vertexSet.getVertex(to), map) + radius / 2;
+        toY = (painting.getHeight() - radius) * getRatioY(model.vertexSet.getVertex(to), map) + radius / 2;
+        gc.setStroke(Color.AQUA);
+        gc.setLineWidth(2);
+        gc.strokeLine(fromX, fromY, toX, toY);
     }
 }

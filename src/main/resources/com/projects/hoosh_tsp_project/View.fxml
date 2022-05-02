@@ -15,7 +15,7 @@
     <children>
       <HBox alignment="CENTER" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-              <TextField fx:id="distance" alignment="CENTER" editable="false" focusTraversable="false" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0;" text="BEST DISTANCE : 99999999" HBox.hgrow="ALWAYS">
+              <TextField fx:id="distance" alignment="CENTER" editable="false" focusTraversable="false" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0; -fx-border-width: 0 2 0 0; -fx-border-color: rgb(14, 22, 33);" text="BEST DISTANCE : ---" HBox.hgrow="ALWAYS">
                   <font>
                       <Font name="System Bold Italic" size="22.0" />
                   </font>
@@ -23,7 +23,7 @@
                       <Cursor fx:constant="DEFAULT" />
                   </cursor>
               </TextField>
-            <TextField fx:id="generation" alignment="CENTER" editable="false" focusTraversable="false" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0;" text="GENERTAION 1212" HBox.hgrow="ALWAYS">
+            <TextField fx:id="generation" alignment="CENTER" editable="false" focusTraversable="false" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0; -fx-border-color: rgb(14, 22, 33); -fx-border-width: 0 0 0 2;" text="GENERTAION 0" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="System Bold Italic" size="22.0" />
                </font>
@@ -37,13 +37,13 @@
             <children>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" style="-fx-border-color: #7BDFF2; -fx-border-radius: 25px; -fx-border-width: 3px;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
                     <children>
-                        <JFXTextField fx:id="vertex" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" promptText="Vertices" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="27" unFocusColor="#5791d0" />
+                        <JFXTextField fx:id="vertex" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" promptText="Vertices" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="5" unFocusColor="#5791d0" />
                         <JFXTextField fx:id="population" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" layoutX="10.0" layoutY="98.0" promptText="Population Size" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="75" unFocusColor="#5791d0" />
                         <JFXTextField fx:id="max" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" layoutX="10.0" layoutY="110.0" promptText="Generation Max" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="100" unFocusColor="#5791d0" />
                         <JFXTextField fx:id="rate" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" layoutX="10.0" layoutY="123.0" promptText="Mutation Rate" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="0.01" unFocusColor="#5791d0" />
                         <HBox alignment="CENTER">
                             <children>
-                                <JFXTextField fx:id="file" alignment="CENTER" focusColor="#4372ff" focusTraversable="false" labelFloat="true" promptText="File" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="TXT_FILE" unFocusColor="#5791d0" HBox.hgrow="ALWAYS" />
+                                <JFXTextField fx:id="file" focusColor="#4372ff" focusTraversable="false" labelFloat="true" promptText="File" style="-fx-text-fill: white; -fx-prompt-text-fill: #ffffff90;" text="TXT_FILE" unFocusColor="#5791d0" HBox.hgrow="ALWAYS" />
                                 <Button fx:id="fileBTN" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4372ff;" text="..." textFill="WHITE">
                                     <HBox.margin>
                                         <Insets />

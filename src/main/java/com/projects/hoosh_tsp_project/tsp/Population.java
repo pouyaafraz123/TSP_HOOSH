@@ -130,15 +130,15 @@ public class Population {
     public String getDetailedInfo() {
         StringBuilder info = new StringBuilder();
         for (Path p : this.paths) {
-            info.append(p.getInfo(this.vertexSet)).append("\n");
+            info.append(p.getInfo(this.vertexSet)).append("\n\n");
         }
         return info.toString();
     }
 
     public String getInfo() {
-        String info = "best distance in population: ";
+        String info = "BEST DISTANCE IN POPULATION : ";
         double currentLowestDistance = this.vertexSet.getTotalDistance(this.getFittestPath());
-        info = info + String.format("%.4f", currentLowestDistance);
+        info = info + String.format("%.4f \n", currentLowestDistance);
         return info;
     }
 }
