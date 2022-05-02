@@ -1,7 +1,7 @@
 package com.projects.hoosh_tsp_project.tsp;
 
 public class Vertex {
-    private static int count = 1;
+    public static int count = 1;
     private static long iCount;
     private long id;
     private String name;

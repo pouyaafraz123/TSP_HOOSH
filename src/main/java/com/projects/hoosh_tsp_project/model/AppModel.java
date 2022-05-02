@@ -26,6 +26,7 @@ public class AppModel extends Model {
             Vertex v = Vertex.getRandom(0, 100, 0, 100, 0, 0);
             vertexSet.addVertex(v);
         }
+        Vertex.count = 1;
     }
 
     public void createVertices(File file) {
