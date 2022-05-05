@@ -23,7 +23,7 @@ public class Chart extends Stage {
     public Chart(ArrayList<Pair<Long, Double>> datas){
         pairs.addAll(datas);
         try {
-            PrintWriter writer = new PrintWriter(new FileOutputStream("Data.txt"));
+            PrintWriter writer = new PrintWriter(new FileOutputStream("Chart.txt"));
             writer.write(datas.toString());
             writer.close();
         } catch (FileNotFoundException e) {

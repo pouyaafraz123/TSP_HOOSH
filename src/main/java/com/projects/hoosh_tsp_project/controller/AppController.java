@@ -115,10 +115,10 @@ public class AppController extends Controller<AppModel, AppView> {
                             if (model.vertexSet.getTotalDistance(p) < model.vertexSet.getTotalDistance(bestPath)) {
                                 bestPath = p;
                                 Double n = model.vertexSet.getTotalDistance(bestPath);
-
+                                datas.add(new Pair<>(dataCount.getAndIncrement(),n));
                                 Platform.runLater(() -> {
                                     view.minDistanceTXF.setText("BEST DISTANCE : " + format.format(n));
-                                    datas.add(new Pair<>(dataCount.getAndIncrement(),n));
+
                                    // System.out.println(n);
                                     view.bestPathArea.setText("BEST PATH : " + bestPath.getInfo(model.vertexSet));
                                 });
