@@ -5,6 +5,7 @@ import com.projects.hoosh_tsp_project.model.AppModel;
 import com.projects.hoosh_tsp_project.setup.ServiceLocator;
 import com.projects.hoosh_tsp_project.setup.SetupClass;
 import com.projects.hoosh_tsp_project.view.AppView;
+import com.projects.hoosh_tsp_project.view.Chart;
 import javafx.concurrent.Worker;
 import javafx.application.Application;
 import javafx.application.Platform;

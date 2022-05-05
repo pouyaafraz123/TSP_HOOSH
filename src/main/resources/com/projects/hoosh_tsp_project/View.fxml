@@ -15,7 +15,15 @@
     <children>
       <HBox alignment="CENTER" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-              <TextField fx:id="distance" alignment="CENTER" editable="false" focusTraversable="false" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0; -fx-border-width: 0 2 0 0; -fx-border-color: rgb(14, 22, 33);" text="BEST DISTANCE : ---" HBox.hgrow="ALWAYS">
+            <TextField fx:id="pop" alignment="CENTER" editable="false" focusTraversable="false" layoutX="10.0" layoutY="11.0" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0; -fx-border-width: 0 2 0 0; -fx-border-color: rgb(14, 22, 33);" text="POPULATION : 0">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextField>
+              <TextField fx:id="distance" alignment="CENTER" editable="false" focusTraversable="false" style="-fx-background-color: #EBF5EE; -fx-background-radius: 0; -fx-border-width: 0 2 0 2; -fx-border-color: rgb(14, 22, 33);" text="BEST DISTANCE : ---" HBox.hgrow="ALWAYS">
                   <font>
                       <Font name="System Bold Italic" size="22.0" />
                   </font>

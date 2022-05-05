@@ -13,6 +13,11 @@
             <artifactId>jfoenix</artifactId>
             <version>8.0.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.gillius</groupId>
+            <artifactId>jfxutils</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <properties>

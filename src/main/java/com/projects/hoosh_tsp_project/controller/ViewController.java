@@ -48,6 +48,13 @@ public class ViewController {
     @FXML
     private TextField generation;
 
+    @FXML
+    private TextField pop;
+
+    public TextField getPop() {
+        return pop;
+    }
+
     public TextField getGeneration() {
         return generation;
     }

@@ -42,6 +42,7 @@ public class AppView extends View<AppModel> {
     public TextArea bestPathArea;
 
     public TextField generation;
+    public TextField pop;
     public Painting painting;
     ViewController control;
 
@@ -75,6 +76,7 @@ public class AppView extends View<AppModel> {
             startBTN = control.getStart();
             stopBTN = control.getStop();
             generation = control.getGeneration();
+            pop = control.getPop();
             control.getContainer().getChildren().add(getPainting());
 
             root.setId("app");
@@ -144,9 +146,9 @@ public class AppView extends View<AppModel> {
             to = path.get(i + 1);
             drawLine(map, from, to, gc);
         }
-        from = path.get(max);
+       /* from = path.get(max);
         to = path.get(0);
-        drawLine(map,from,to,gc);
+        drawLine(map,from,to,gc);*/
     }
 
     private void drawLine(MapReference map, int from, int to, GraphicsContext gc) {

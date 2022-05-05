@@ -7,14 +7,18 @@ import com.projects.hoosh_tsp_project.setup.ServiceLocator;
 import com.projects.hoosh_tsp_project.tsp.Path;
 import com.projects.hoosh_tsp_project.tsp.Population;
 import com.projects.hoosh_tsp_project.view.AppView;
+import com.projects.hoosh_tsp_project.view.Chart;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.util.Pair;
 
 import java.io.File;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class AppController extends Controller<AppModel, AppView> {
     private final DecimalFormat format = new DecimalFormat("#,##0.0000");
@@ -23,6 +27,9 @@ public class AppController extends Controller<AppModel, AppView> {
     boolean isStarted;
     Path bestPath;
     Thread GA;
+
+    ArrayList<Pair<Long,Double>> datas = new ArrayList<>();
+    AtomicLong dataCount = new AtomicLong(1);
 
     public AppController(AppModel model, AppView view) {
         super(model, view);
@@ -39,6 +46,7 @@ public class AppController extends Controller<AppModel, AppView> {
                 breakEvaluation();
             }
             serviceLocator.getLogger().info("stop evaluation");
+            new Chart(datas);
         });
 
         view.selectFileBTN.setOnAction((ActionEvent) -> {
@@ -77,14 +85,14 @@ public class AppController extends Controller<AppModel, AppView> {
                 @Override
                 protected Void call() throws Exception {
                     isStopped = false;
-                    AtomicInteger generationCount = new AtomicInteger(1);
+                    AtomicInteger popCount = new AtomicInteger(1);
                     while (!isStopped) {
-                   /*     System.out.println("================================== Generation : "
-                                + generationCount++ + " ==================================");*/
-                        String generation = "GENERATION " + generationCount.getAndIncrement();
+
+                        String pop = "POPULATION " + popCount.getAndIncrement();
                         Platform.runLater(() -> {
-                            view.generation.setText(generation);
+                            view.pop.setText(pop);
                         });
+
                         int nSize = Integer.parseInt(view.populationSizeTXF.getText());
                         double nRate = Double.parseDouble(view.mutationRateTXF.getText());
                         model.population = new Population(model.vertexSet, nSize, nRate);
@@ -94,16 +102,24 @@ public class AppController extends Controller<AppModel, AppView> {
                         }
 
                         int i = Integer.parseInt(view.evolutionScopeTXF.getText());
+                        AtomicInteger generationCount = new AtomicInteger(1);
                         while (i > 0 && !isStopped) {
                            // System.out.println("evolution: " + i);
+                            String generation = "GENERATION " + generationCount.getAndIncrement();
+                            Platform.runLater(() -> {
+                                view.generation.setText(generation);
+                            });
                             model.population.evolution();
                             Path p = model.population.getFittestPath();
+
                             if (model.vertexSet.getTotalDistance(p) < model.vertexSet.getTotalDistance(bestPath)) {
                                 bestPath = p;
                                 Double n = model.vertexSet.getTotalDistance(bestPath);
 
                                 Platform.runLater(() -> {
                                     view.minDistanceTXF.setText("BEST DISTANCE : " + format.format(n));
+                                    datas.add(new Pair<>(dataCount.getAndIncrement(),n));
+                                   // System.out.println(n);
                                     view.bestPathArea.setText("BEST PATH : " + bestPath.getInfo(model.vertexSet));
                                 });
                                 Platform.runLater(() -> {
@@ -117,7 +133,7 @@ public class AppController extends Controller<AppModel, AppView> {
                         //model.cleanPopBook();
                         String c = (model.population.getInfo());
                      //   System.out.println(c);
-                        model.writeToPopBook("========================== "+generation+" ==========================\n");
+                        model.writeToPopBook("========================== "+pop+" ==========================\n");
                         model.writeToPopBook(c);
                      //   model.writeToPopBook(model.population.getDetailedInfo());
                         Thread.sleep(Long.parseLong(view.pauseTimeTXF.getText()));
