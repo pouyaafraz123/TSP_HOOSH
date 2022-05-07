@@ -1,6 +1,9 @@
 package com.projects.hoosh_tsp_project.model;
 
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public abstract class View<M extends Model> {
@@ -13,6 +16,10 @@ public abstract class View<M extends Model> {
         this.model = model;
         scene = createGUI();
         stage.setScene(scene);
+        scene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.F11)
+                stage.setFullScreen(true);
+        });
     }
 
     protected abstract Scene createGUI();

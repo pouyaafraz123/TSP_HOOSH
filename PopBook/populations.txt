@@ -1,112 +1,12 @@
 ========================== POPULATION 1 ==========================
-BEST DISTANCE IN POPULATION : 445.4343 
+BEST DISTANCE IN POPULATION : 463.9453 
 ========================== POPULATION 2 ==========================
-BEST DISTANCE IN POPULATION : 444.9904 
+BEST DISTANCE IN POPULATION : 450.8910 
 ========================== POPULATION 3 ==========================
-BEST DISTANCE IN POPULATION : 454.8541 
+BEST DISTANCE IN POPULATION : 451.3435 
 ========================== POPULATION 4 ==========================
-BEST DISTANCE IN POPULATION : 436.8073 
+BEST DISTANCE IN POPULATION : 472.3447 
 ========================== POPULATION 5 ==========================
-BEST DISTANCE IN POPULATION : 437.3739 
+BEST DISTANCE IN POPULATION : 453.2710 
 ========================== POPULATION 6 ==========================
-BEST DISTANCE IN POPULATION : 428.7179 
-========================== POPULATION 7 ==========================
-BEST DISTANCE IN POPULATION : 469.9653 
-========================== POPULATION 8 ==========================
-BEST DISTANCE IN POPULATION : 435.2933 
-========================== POPULATION 9 ==========================
-BEST DISTANCE IN POPULATION : 441.1405 
-========================== POPULATION 10 ==========================
-BEST DISTANCE IN POPULATION : 448.3739 
-========================== POPULATION 11 ==========================
-BEST DISTANCE IN POPULATION : 439.0874 
-========================== POPULATION 12 ==========================
-BEST DISTANCE IN POPULATION : 458.2212 
-========================== POPULATION 13 ==========================
-BEST DISTANCE IN POPULATION : 436.0831 
-========================== POPULATION 14 ==========================
-BEST DISTANCE IN POPULATION : 450.9490 
-========================== POPULATION 15 ==========================
-BEST DISTANCE IN POPULATION : 449.0833 
-========================== POPULATION 16 ==========================
-BEST DISTANCE IN POPULATION : 437.7638 
-========================== POPULATION 17 ==========================
-BEST DISTANCE IN POPULATION : 423.3626 
-========================== POPULATION 18 ==========================
-BEST DISTANCE IN POPULATION : 433.5770 
-========================== POPULATION 19 ==========================
-BEST DISTANCE IN POPULATION : 424.0011 
-========================== POPULATION 20 ==========================
-BEST DISTANCE IN POPULATION : 426.8829 
-========================== POPULATION 21 ==========================
-BEST DISTANCE IN POPULATION : 440.6196 
-========================== POPULATION 22 ==========================
-BEST DISTANCE IN POPULATION : 449.9769 
-========================== POPULATION 23 ==========================
-BEST DISTANCE IN POPULATION : 427.2587 
-========================== POPULATION 24 ==========================
-BEST DISTANCE IN POPULATION : 444.0368 
-========================== POPULATION 25 ==========================
-BEST DISTANCE IN POPULATION : 430.7135 
-========================== POPULATION 26 ==========================
-BEST DISTANCE IN POPULATION : 437.9917 
-========================== POPULATION 27 ==========================
-BEST DISTANCE IN POPULATION : 457.6371 
-========================== POPULATION 28 ==========================
-BEST DISTANCE IN POPULATION : 447.0049 
-========================== POPULATION 29 ==========================
-BEST DISTANCE IN POPULATION : 443.5240 
-========================== POPULATION 30 ==========================
-BEST DISTANCE IN POPULATION : 444.3379 
-========================== POPULATION 31 ==========================
-BEST DISTANCE IN POPULATION : 439.9044 
-========================== POPULATION 32 ==========================
-BEST DISTANCE IN POPULATION : 434.5997 
-========================== POPULATION 33 ==========================
-BEST DISTANCE IN POPULATION : 438.5861 
-========================== POPULATION 34 ==========================
-BEST DISTANCE IN POPULATION : 430.2160 
-========================== POPULATION 35 ==========================
-BEST DISTANCE IN POPULATION : 443.4498 
-========================== POPULATION 36 ==========================
-BEST DISTANCE IN POPULATION : 447.1978 
-========================== POPULATION 37 ==========================
-BEST DISTANCE IN POPULATION : 440.0337 
-========================== POPULATION 38 ==========================
-BEST DISTANCE IN POPULATION : 448.2426 
-========================== POPULATION 39 ==========================
-BEST DISTANCE IN POPULATION : 449.3505 
-========================== POPULATION 40 ==========================
-BEST DISTANCE IN POPULATION : 462.1429 
-========================== POPULATION 41 ==========================
-BEST DISTANCE IN POPULATION : 426.4275 
-========================== POPULATION 42 ==========================
-BEST DISTANCE IN POPULATION : 435.1728 
-========================== POPULATION 43 ==========================
-BEST DISTANCE IN POPULATION : 440.8551 
-========================== POPULATION 44 ==========================
-BEST DISTANCE IN POPULATION : 434.5765 
-========================== POPULATION 45 ==========================
-BEST DISTANCE IN POPULATION : 426.4961 
-========================== POPULATION 46 ==========================
-BEST DISTANCE IN POPULATION : 433.8833 
-========================== POPULATION 47 ==========================
-BEST DISTANCE IN POPULATION : 449.4384 
-========================== POPULATION 48 ==========================
-BEST DISTANCE IN POPULATION : 451.7744 
-========================== POPULATION 49 ==========================
-BEST DISTANCE IN POPULATION : 449.2635 
-========================== POPULATION 50 ==========================
-BEST DISTANCE IN POPULATION : 443.7989 
-========================== POPULATION 51 ==========================
-BEST DISTANCE IN POPULATION : 426.2614 
-========================== POPULATION 52 ==========================
-BEST DISTANCE IN POPULATION : 444.3580 
-========================== POPULATION 53 ==========================
-BEST DISTANCE IN POPULATION : 413.3355 
-========================== POPULATION 54 ==========================
-BEST DISTANCE IN POPULATION : 419.6496 
-========================== POPULATION 55 ==========================
-BEST DISTANCE IN POPULATION : 446.1360 
-========================== POPULATION 56 ==========================
-BEST DISTANCE IN POPULATION : 459.3114 
+BEST DISTANCE IN POPULATION : 453.8760 

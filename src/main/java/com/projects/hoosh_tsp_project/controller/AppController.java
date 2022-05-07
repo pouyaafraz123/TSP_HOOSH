@@ -59,6 +59,8 @@ public class AppController extends Controller<AppModel, AppView> {
     }
 
     private void runEvaluation() {
+        datas.clear();
+        dataCount.set(1);
         boolean exit = false;
         isStarted = true;
         bestPath = null;

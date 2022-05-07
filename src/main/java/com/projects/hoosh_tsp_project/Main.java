@@ -47,7 +47,7 @@ public class Main extends Application {
         view = new AppView(appStage, model);
         new AppController(model, view);
         serviceLocator = ServiceLocator.getServiceLocator();
-        view.start(false);
+        view.start(true);
 
     }
 

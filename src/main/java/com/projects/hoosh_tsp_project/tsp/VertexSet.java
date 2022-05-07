@@ -53,7 +53,7 @@ public class VertexSet {
             to = p.get(i + 1);
             totalDistance += this.Set.get(from).getDistance(this.Set.get(to));
         }
-      //  totalDistance += this.Set.get(max).getDistance(this.Set.get(0));
+        totalDistance += this.Set.get(p.get(max)).getDistance(this.Set.get(p.get(0)));
         return totalDistance;
     }
 

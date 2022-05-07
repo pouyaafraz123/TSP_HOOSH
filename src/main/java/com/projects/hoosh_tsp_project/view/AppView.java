@@ -10,6 +10,8 @@ import com.projects.hoosh_tsp_project.tsp.MapReference;
 import com.projects.hoosh_tsp_project.tsp.Path;
 import com.projects.hoosh_tsp_project.tsp.Vertex;
 import com.projects.hoosh_tsp_project.tsp.VertexSet;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.canvas.GraphicsContext;
@@ -46,6 +48,12 @@ public class AppView extends View<AppModel> {
     public Painting painting;
     ViewController control;
 
+    private double width;
+    private double height;
+    private Path lastPath;
+    private VertexSet lastVertexSet;
+    private MapReference lastMap;
+
     public AppView(Stage stage, AppModel model) {
         super(stage, model);
         stage.setTitle("TSP");
@@ -77,7 +85,20 @@ public class AppView extends View<AppModel> {
             stopBTN = control.getStop();
             generation = control.getGeneration();
             pop = control.getPop();
-            control.getContainer().getChildren().add(getPainting());
+            Painting p = getPainting();
+            AnchorPane.setLeftAnchor(p,0.0);
+            AnchorPane.setTopAnchor(p,0.0);
+            AnchorPane.setRightAnchor(p,0.0);
+            AnchorPane.setBottomAnchor(p,0.0);
+            control.getContainer().widthProperty().addListener((observable, oldValue, newValue) -> {
+                width = newValue.doubleValue();
+                setPainting();
+            });
+            control.getContainer().heightProperty().addListener((observable, oldValue, newValue) -> {
+                height = newValue.doubleValue();
+                setPainting();
+            });
+            control.getContainer().getChildren().add(p);
 
             root.setId("app");
             return new Scene(root);
@@ -99,6 +120,18 @@ public class AppView extends View<AppModel> {
         }
         return painting;
     }
+    public void setPainting() {
+        control.getContainer().getChildren().remove(getPainting());
+        double nWidth = width ;
+        double nHeight = height;
+        painting = new Painting(nWidth, nHeight);
+        clear(painting);
+        if (lastVertexSet!=null)
+             drawVertices(lastVertexSet,lastMap);
+        if (lastPath!=null)
+             drawPaths(lastMap,lastPath);
+        control.getContainer().getChildren().add(painting);
+    }
 
     public void clear(Painting p) {
         GraphicsContext gc = painting.getGraphicsContext2D();
@@ -108,6 +141,8 @@ public class AppView extends View<AppModel> {
     }
 
     public void drawVertices(VertexSet vertexSet, MapReference map) {
+        lastMap = map;
+        lastVertexSet = vertexSet;
         double xRatio;
         double yRatio;
         GraphicsContext gc = painting.getGraphicsContext2D();
@@ -132,11 +167,8 @@ public class AppView extends View<AppModel> {
     }
 
     public void drawPaths(MapReference map, Path path) {
+        lastPath = path;
         int max = path.getLength() - 1;
-        double fromX;
-        double fromY;
-        double toX;
-        double toY;
         int from;
         int to;
         GraphicsContext gc = painting.getGraphicsContext2D();
@@ -146,9 +178,9 @@ public class AppView extends View<AppModel> {
             to = path.get(i + 1);
             drawLine(map, from, to, gc);
         }
-       /* from = path.get(max);
+        from = path.get(max);
         to = path.get(0);
-        drawLine(map,from,to,gc);*/
+        drawLine(map,from,to,gc);
     }
 
     private void drawLine(MapReference map, int from, int to, GraphicsContext gc) {
