@@ -1,12 +1,2 @@
 ========================== POPULATION 1 ==========================
-BEST DISTANCE IN POPULATION : 463.9453 
-========================== POPULATION 2 ==========================
-BEST DISTANCE IN POPULATION : 450.8910 
-========================== POPULATION 3 ==========================
-BEST DISTANCE IN POPULATION : 451.3435 
-========================== POPULATION 4 ==========================
-BEST DISTANCE IN POPULATION : 472.3447 
-========================== POPULATION 5 ==========================
-BEST DISTANCE IN POPULATION : 453.2710 
-========================== POPULATION 6 ==========================
-BEST DISTANCE IN POPULATION : 453.8760 
+BEST DISTANCE IN POPULATION : 34292.9270 

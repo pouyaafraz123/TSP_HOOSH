@@ -126,10 +126,11 @@ public class AppView extends View<AppModel> {
         double nHeight = height;
         painting = new Painting(nWidth, nHeight);
         clear(painting);
-        if (lastVertexSet!=null)
-             drawVertices(lastVertexSet,lastMap);
         if (lastPath!=null)
-             drawPaths(lastMap,lastPath);
+            drawPaths(lastMap,lastPath);
+        if (lastVertexSet!=null)
+            drawVertices(lastVertexSet,lastMap);
+
         control.getContainer().getChildren().add(painting);
     }
 
@@ -151,10 +152,12 @@ public class AppView extends View<AppModel> {
             xRatio = getRatioX(v, map);
             yRatio = getRatioY(v, map);
             gc.setFill(Color.WHITE);
-            gc.fillOval((painting.getWidth() - radius) * xRatio, (painting.getHeight() - radius) * yRatio, radius, radius);
+            gc.fillOval((painting.getWidth() - radius) * xRatio,
+                    (painting.getHeight() - radius) * yRatio, radius, radius);
             gc.setFill(Color.rgb(255, 9, 235));
             gc.setFont(Font.font(12));
-            gc.fillText(v.getName(), ((painting.getWidth() - radius) * xRatio) + 4, ((painting.getHeight() - radius) * yRatio) + radius / 2 + 6, 30);
+            gc.fillText(v.getName(), ((painting.getWidth() - radius) * xRatio) + 4,
+                    ((painting.getHeight() - radius) * yRatio) + radius / 2 + 6, 30);
         }
     }
 

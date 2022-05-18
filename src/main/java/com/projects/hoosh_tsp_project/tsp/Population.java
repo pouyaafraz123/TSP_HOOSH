@@ -95,7 +95,7 @@ public class Population {
             Path p = this.paths.get(i);
             totalDistance = vertexSet.getTotalDistance(p);
             newFitness = (fitnessRef - totalDistance) / fitnessRef;
-            newFitness = newFitness / (this.paths.size() - 1);
+            newFitness = newFitness / (double) (this.paths.size() - 1);
             p.setFitness(newFitness);
         }
     }
